@@ -52,7 +52,8 @@ function draw() {
 
   // Draw line connecting points
   this.connectRandomPoints = () => {
-    if (this.points.length < 2) {
+    // ~40% chance for line
+    if (this.points.length < 2 && random() > 0.4) {
       return false;
     }
     let [x1, y1] = sample(this.points);
